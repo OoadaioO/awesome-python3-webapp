@@ -1,7 +1,10 @@
-import unittest
+#!/bin/user/env python3
+# -*- coding: utf-8 -*-
 
-import www.orm as orm
-from www.models import User, Blog, Comment
+__author__="阿呆"
+
+import orm
+from models import User, Blog, Comment
 
 
 def test():
