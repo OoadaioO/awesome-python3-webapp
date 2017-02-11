@@ -82,7 +82,7 @@ class TextField(Field):
 
 class FloatField(Field):
     def __init__(self,name=None,primary_key=False,default=0.0):
-        super().__init__(self,name,'real',primary_key,default)
+        super().__init__(name,'real',primary_key,default)
 
 
 class BooleanField(Field):
