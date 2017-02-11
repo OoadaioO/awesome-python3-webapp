@@ -18,7 +18,7 @@ create table users (
     unique key `idx_email` (`email`),
     key `idx_created_at` (`created_at`)
     primary key(`id`)
-) engine=innodb;
+) engine=innodb default charset=utf8mb4;
 
 create table blogs (
     `id` varchar(50) not null,
@@ -31,7 +31,7 @@ create table blogs (
     `create_at` real not null,
     key `idx_created_at` (`created_at`)
     primary key (`id`)
-) engine=innodb;
+) engine=innodb default charset=utf8mb4;
 
 create table comments (
     `id` varchar(50) not null,
@@ -43,6 +43,6 @@ create table comments (
     `created_at` real not null,
     key `idx_created_at` (`created_at`)
     primary key (`id`)
-) engine = innodb;
+) engine = innodb default charset=utf8mb4;
 
 
