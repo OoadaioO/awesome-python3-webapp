@@ -16,9 +16,9 @@ create table users (
     `image` varchar(500) not null,
     `create_at` real not null,
     unique key `idx_email` (`email`),
-    key `idx_created_at` (`created_at`)
+    key `idx_created_at` (`created_at`),
     primary key(`id`)
-) engine=innodb default charset=utf8mb4;
+) engine=innodb;
 
 create table blogs (
     `id` varchar(50) not null,
@@ -29,9 +29,9 @@ create table blogs (
     `summary` varchar(200) not null,
     `content` mediumtext not null,
     `create_at` real not null,
-    key `idx_created_at` (`created_at`)
+    key `idx_created_at` (`created_at`),
     primary key (`id`)
-) engine=innodb default charset=utf8mb4;
+) engine=innodb;
 
 create table comments (
     `id` varchar(50) not null,
@@ -41,8 +41,8 @@ create table comments (
     `user_image` varchar(500) not null,
     `content` mediumtext not null,
     `created_at` real not null,
-    key `idx_created_at` (`created_at`)
+    key `idx_created_at` (`created_at`),
     primary key (`id`)
-) engine = innodb default charset=utf8mb4;
+) engine = innodb;
 
 
