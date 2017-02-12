@@ -10,9 +10,11 @@ loop = asyncio.get_event_loop()
 
 async def test():
     await orm.create_pool(loop=loop,user='www-data', password='www-data', db='awesome')
-    u = User.find_all('email = ?',['test@example.com'])
+    u = await User.find_all('email = ?',['test@example.com'])
     if u is not None:
-        u.remove()
+        print('user already exist:\n%s' % u)
+        
+        await u[0].remove()
     u = User(name='Test', email='test@example.com', password='1234567890', image='about:blank')
     await u.save()
 
